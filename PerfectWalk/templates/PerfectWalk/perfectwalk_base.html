@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block stylesheets %}
+    {{ block.super }} <!-- use parent stylesheets + app specific stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{%static 'PerfectWalk/PWstyles.css' %}">
+{% endblock %}
+
+{% block pagetop-css %} cover-PW {% endblock %}
+
+{% block page-title %}Perfect Walk{% endblock %}
+{% block page-subtitle %}Check back for future updates!!{% endblock %}
+{% block button1 %}<a href="{% url 'PWhome' %}" class="contact-btn">Home</a>{% endblock %}
+{% block button2 %}<a href="{% url 'PWindex' %}" class="contact-btn">Index</a>{% endblock %}
+{% block button3 %}<a href="{% url 'PWcreateUser' %}" class="contact-btn">Create User</a>{% endblock %}
+{% block button4 %}<a href="{% url 'PWcreatePet' %}" class="contact-btn">Register Pet</a>{% endblock %}
+{% block button5 %}<a href="{% url 'PWcreatePost' %}" class="contact-btn">Make a Post</a>{% endblock %}
+
+{% block appcontent %}
+    <section>
+
+        {% block templatecontent %}{% endblock %}
+{% endblock %}

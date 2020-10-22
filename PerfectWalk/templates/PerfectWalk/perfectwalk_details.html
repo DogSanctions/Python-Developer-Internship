@@ -1,0 +1,46 @@
+{% extends 'PerfectWalk/perfectwalk_base.html' %}
+{% load staticfiles %}
+{% block templatecontent %}
+<section>
+    <div class="flex-container post" id="details_page">
+        <table class="table table-hover" id="post_details_tbl">
+            <tr>
+                <th>Park Name</th>
+                <td>{{posts.park_name}}</td>
+            </tr>
+            <tr>
+                <th>Park Location</th>
+                <td>{{posts.park_location}}</td>
+            </tr>
+            <tr>
+                <th>Park Review</th>
+                <td>{{posts.park_review}}</td>
+            </tr>
+            <tr>
+                <th>Park Recommendation</th>
+                <td>{{posts.park_thumbs}}</td>
+            </tr>
+            <tr>
+                <th>Date Visited</th>
+                <td>{{posts.date_visited}}</td>
+            </tr>
+            <tr>
+                <th>Time Posted</th>
+                <td>{{posts.post_time}}</td>
+            </tr>
+            <tr>
+                <th>Poster</th>
+                <td>{{posts.user}}</td>
+            </tr>
+            <tr>
+                <th>Pet Type</th>
+                <td>{{posts.pet}}{{pk}}</td>
+            </tr>
+        </table>
+        <a class="btn btn-dark btn-sm" href="{% url 'PWpostEdit' pk=posts.pk %}"><span class="glyphicon glyphicon-pencil">Edit Post</span></a>
+        <a class="btn btn-dark btn-sm" href="{% url 'PWpostDelete' pk=posts.pk %}"><span class="glyphicon glyphicon-pencil">Delete Post</span></a>
+        <hr />
+        <button class="btn btn-dark btn-sm" type="button" onclick=" location.href='{% url 'PWindex' %}'">Back to Posts</button>
+    </div>
+</section>
+{% endblock %}

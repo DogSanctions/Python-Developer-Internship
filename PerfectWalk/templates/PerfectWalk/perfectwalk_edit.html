@@ -1,0 +1,12 @@
+{% extends 'PerfectWalk/perfectwalk_base.html' %}
+{% load staticfiles %}
+{% block templatecontent %}
+<section class="flex-container" id="PWedit_page">
+    <h2>New post</h2>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-dark btn-sm">Save</button>
+       {{ pk }}
+    </form>
+</section>
+{% endblock %}

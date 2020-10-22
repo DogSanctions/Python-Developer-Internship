@@ -1,0 +1,29 @@
+{% extends 'PerfectWalk/perfectwalk_base.html' %}
+{% load staticfiles %}
+{% block templatecontent %}
+<section>
+    <div class="flex-container perfectwalk" id="mainCollPage">
+        <table class="table-striped" id="mainCollPagetbl">
+            <tr>
+                <th class="col-md">Park name</th>
+                <th class="col-md">Park location</th>
+                <th class="col-md">Review</th>
+                <th class="col-md">Thumbs</th>
+                <th class="col-md">User</th>
+                <th class="col-md">Pet</th>
+            </tr>
+            {% for post in posts %}
+                <tr>
+                    <td class="col-md">{{post.park_name}}</td>
+                    <td class="col-md">{{post.park_location}}</td>
+                    <td class="col-md"><a href="{{post.pk}}/perfectwalk_details"><button class="btn-dark btn-sm text-center">Details</button></a></td>
+                    <td class="col-md">{{post.park_thumbs}}</td>
+                    <td class="col-md">{{post.user}}</td>
+                    <td class="col-md">{{post.pet}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <button class="btn btn-dark btn-sm" type="button" onclick=" location.href='{% url 'PWcreatePost' %}'">Post a Park Review</button>
+    </div>
+</section>
+{% endblock %}

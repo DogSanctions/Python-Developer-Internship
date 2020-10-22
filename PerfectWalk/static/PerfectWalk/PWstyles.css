@@ -1,0 +1,105 @@
+/*===================================================
+PERFECT WALK CUSTOM STYLING SHEET
+ =====================================================*/
+/* perfectwalk_home.html */
+.cover-PW {
+ background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('../PerfectWalk/images/sunnyicon.gif') center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ color: black;
+ height: 90vh;
+}
+
+.layer name{
+    color:black;
+}
+.PW_Summary {
+    display: inline-block;
+    padding: 2px 2px 2px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
+}
+
+body {
+    color: black;
+}
+
+/* perfectwalk_create.html */
+
+.flex-container_pw {
+    background:  url('../PerfectWalk/images/pwdog.gif'), linear-gradient(rgba(232, 185, 81, 1), rgba(232, 185, 81, 1));
+    background-position: bottom right, center;
+    background-repeat: no-repeat;
+    background-size: 20vh, cover;
+}
+
+.contact-btn, #ct-btn {
+    color: black;
+    border: 1px solid black;
+}
+
+ul#scene li.name {
+    color: black;
+}
+
+ul#scene li.title {
+    color: black;
+}
+
+table#pwCreatePagetbl.create_perfectwalk {
+    padding: 20px;
+    color: white;
+    width: 100%;
+    height: 20px;
+    justify-content: center;
+    display: flex;
+    align-self: center;
+    border-collapse: collapse;
+}
+tr#pwCreatePagetbl.create_perfectwalk {
+    padding: 20px;
+    width: border-box;
+    height: border-box;
+}
+
+#mainCollPage {
+    background-color: rgba(232, 185, 81, 1);
+}
+
+#mainCollPagetbl.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(232, 185, 81, 1);
+}
+
+table#mainCollPagetbl.table-striped {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    table-layout: auto;
+}
+
+#details_page {
+    background-color: rgba(232, 185, 81, 1);
+    color: white;
+}
+
+#post_details_tbl {
+    color: white;
+}
+
+#homepage_pw {
+    background-color: rgba(232, 185, 81, 1);
+    color: white;
+}
+
+section#PWedit_page.flex-container {
+    background-color: rgba(232, 185, 81, 1);
+    color: white;
+}
+
+#pwDeletePage {
+    background-color: rgba(232, 185, 81, 1);
+    color: white;
+}

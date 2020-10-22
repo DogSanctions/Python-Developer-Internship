@@ -1,0 +1,18 @@
+{% extends 'PerfectWalk/perfectwalk_base.html' %}
+{% load staticfiles %}
+{% block templatecontent %}
+<section>
+    <div class="flex-container_pw" id="pwCreatePage">
+        <form method="post">
+            {% csrf_token %}
+            <table class="create_perfectworld" id="pwCreatePagetbl">
+                {{ form.as_table }}
+            </table>
+            {{ form.non_field_errors }}
+            <button class="btn btn-dark btn-sm" type="submit" value="Submit">Create</button>
+            <hr />
+            <button class="btn btn-dark btn-sm" type="submit" onclick=" location.href='{% url 'PWhome' %}'">Back</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

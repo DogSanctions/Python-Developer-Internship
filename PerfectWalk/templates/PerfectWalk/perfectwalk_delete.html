@@ -1,0 +1,14 @@
+{% extends 'PerfectWalk/perfectwalk_base.html' %}
+{% load staticfiles %}
+{% block templatecontent %}
+<section class="flex-container" id="pwDeletePage">
+<p>Are you sure you want to delete "{{posts}}"?</p>
+
+<form method="POST">
+    {% csrf_token %}
+    <a href="{% url 'PWpostDetails' pk=posts.pk %}">Cancel</a>
+
+    <input type="submit" name="Confirm">
+</form>
+</section>
+{% endblock %}
